@@ -33,7 +33,7 @@ const Hero = () => {
     if (loadedVideos === totalVideos - 1) {
       setIsLoading(false);
     }
-  });
+  }, [loadedVideos]);
 
   useGSAP(
     () => {
@@ -121,7 +121,7 @@ const Hero = () => {
             loop
             muted
             id="next-video"
-            className="ablsolute-center invisible absolute z-20 size-64 object-cover object-center"
+            className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
             onLoadedData={handleVideoLoaded}
           />
 
